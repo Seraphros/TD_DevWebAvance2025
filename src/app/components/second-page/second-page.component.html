@@ -1,0 +1,12 @@
+<div class="m-3">
+  <div class="text-xl text-[#3643ba] font-bold">
+    Gestionnaire de lumières
+  </div>
+  <div class="flex gap-3">
+    <div *ngFor="let light of lights">
+      <app-light [name]="light.name"
+                 [state]="light.state"
+                 (change)="light.state = !light.state"/>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="m-3">
+	<div class="flex">
+		<div class="p-3 bg-black text-white">Compteur</div>
+		<div class="grow p-3 bg-orange-500 text-white"> {{ compteur }}</div>
+	</div>
+	<div class="flex gap-3 m-3">
+		<div class="p-3 bg-gray-200 rounded cursor-pointer hover:bg-gray-300 transition-all" (click)="decrement()">
+			Décrémenter
+		</div>
+		<div class="p-3 bg-gray-200 rounded cursor-pointer hover:bg-gray-300 transition-all" (click)="increment()">
+			Incrementer
+		</div>
+	</div>
+</div>
