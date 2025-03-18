@@ -1,12 +1,18 @@
-<div class="m-3">
-  <div class="text-xl text-[#3643ba] font-bold">
-    Gestionnaire de lumières
-  </div>
-  <div class="flex gap-3">
-    <div *ngFor="let light of lights">
-      <app-light [name]="light.name"
-                 [state]="light.state"
-                 (change)="light.state = !light.state"/>
-    </div>
-  </div>
+<div class="m-3 flex flex-col gap-5">
+	<div class="text-xl text-[#3643ba] font-bold">
+		Gestionnaire de lumières
+	</div>
+	<div class="flex gap-3 flex-wrap">
+		<div *ngFor="let light of lights">
+			<app-light [name]="light.name"
+					   [state]="light.state"
+					   (change)="light.state = !light.state"
+					   (delete)="removeLight(light.id)"/>
+		</div>
+	</div>
+	<div class="flex gap-3">
+		<div class="p-3 border rounded bg-[#3643ba] text-white cursor-pointer hover:bg-gray-400" (click)="addLight()">
+			Ajouter une lampe
+		</div>
+	</div>
 </div>

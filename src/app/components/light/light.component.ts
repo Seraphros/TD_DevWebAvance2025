@@ -15,5 +15,6 @@ export class LightComponent {
   @Input() name: string = "";
   @Input() state: boolean = false;
   @Output() change: EventEmitter<void> = new EventEmitter();
+  @Output() delete: EventEmitter<void> = new EventEmitter();
 
 }
