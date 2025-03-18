@@ -4,7 +4,7 @@
 	</div>
 
 	<div class="flex gap-3 flex-wrap">
-		<div *ngFor="let light of lights">
+		<div *ngFor="let light of getLights()">
 			<app-light [name]="light.name"
 					   [state]="light.state"
 					   (change)="light.state = !light.state"

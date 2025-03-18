@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {Light} from '../../models/light';
 import {LightComponent} from '../light/light.component';
 import {NgForOf} from '@angular/common';
+import {LightService} from '../../services/light.service';
 
 @Component({
 	selector: 'app-gestion',
@@ -15,34 +16,18 @@ import {NgForOf} from '@angular/common';
 })
 export class GestionComponent {
 
-	lights: Light[] = [
-		{
-			id: 0,
-			state: false,
-			name: "Lampe 0"
-		},
-		{
-			id: 1,
-			state: true,
-			name: "Lampe 1"
-		},
-		{
-			id: 2,
-			state: false,
-			name: "Lampe 2"
-		}
-	];
+	constructor(private lightService: LightService) {}
+
+	getLights(): Light[] {
+		return this.lightService.getLights();
+	}
 
 	addLight() {
-		this.lights.push({
-			id: this.lights.length,
-			state: false,
-			name: "Lampe " + this.lights.length
-		});
+		this.lightService.addLight();
 	}
 
 	removeLight(id: number) {
-		this.lights = this.lights.filter(light => light.id !== id);
+		this.lightService.removeLight(id);
 	}
 
 
