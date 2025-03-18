@@ -1,7 +1,8 @@
-<div class="m-3 flex flex-col gap-5">
+<div class="m-3 flex flex-col gap-5 w-full">
 	<div class="text-xl text-[#3643ba] font-bold">
 		Gestionnaire de lumières
 	</div>
+
 	<div class="flex gap-3 flex-wrap">
 		<div *ngFor="let light of lights">
 			<app-light [name]="light.name"

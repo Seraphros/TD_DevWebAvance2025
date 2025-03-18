@@ -1,0 +1,18 @@
+
+
+<div class="m-3 flex flex-col gap-5 w-full">
+	<div class="text-xl text-[#3643ba] font-bold">
+		Dashboard de lumières
+	</div>
+
+	<div class="flex gap-3 w-full">
+		<div class="grow flex flex-col gap-3 items-center justify-center border border-gray-300 p-3 rounded">
+			<div class="text-3xl font-bold">{{getLightsFromState(true).length}}</div>
+			<div class="text-sm text-gray-600">Lampes Allumées</div>
+		</div>
+		<div class="grow flex flex-col gap-3 items-center justify-center border border-gray-300 p-3 rounded">
+			<div class="text-3xl font-bold">{{getLightsFromState(false).length}}</div>
+			<div class="text-sm text-gray-600">Lampes Éteintes</div>
+		</div>
+	</div>
+</div>

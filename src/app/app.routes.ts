@@ -1,9 +1,9 @@
 import {Routes} from '@angular/router';
-import {FirstPageComponent} from './components/first-page/first-page.component';
-import {SecondPageComponent} from './components/second-page/second-page.component';
+import {GestionComponent} from './components/gestion/gestion.component';
+import {DashboardComponent} from './components/dashboard/dashboard.component';
 
 export const routes: Routes = [
-  {path: "first", component: FirstPageComponent},
-  {path: "second", component: SecondPageComponent},
-  {path: "**", redirectTo: "second"}
+  {path: "dashboard", component: DashboardComponent},
+  {path: "gestion", component: GestionComponent},
+  {path: "**", redirectTo: "dashboard"}
 ];
