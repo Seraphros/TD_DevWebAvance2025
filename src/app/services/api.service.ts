@@ -12,8 +12,13 @@ export class ApiService {
 	checkPing(): Promise<boolean> {
 		return new Promise(resolve => {
 			this.httpClient.get("/api/ping", {responseType: "text"})
-				.subscribe(response => {
-					resolve(response === "pong");
+				.subscribe({
+					next: (responses: any) => {
+						resolve(responses);
+					},
+					error: () => {
+						resolve(false);
+					}
 				});
 		});
 	}

@@ -21,6 +21,11 @@ export class NavbarComponent implements OnInit {
 	constructor(private api: ApiService) {}
 
 	ngOnInit(): void {
+		this.checkApiState();
+		setInterval(() => this.checkApiState(), 1000);
+	}
+
+	checkApiState(): void {
 		this.api.checkPing().then(state => this.apiState = state);
 	}
 
