@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Light} from '../../models/light';
 import {LightComponent} from '../light/light.component';
 import {NgForOf} from '@angular/common';
@@ -16,7 +16,9 @@ import {LightService} from '../../services/light.service';
 })
 export class GestionComponent {
 
+
 	constructor(private lightService: LightService) {}
+
 
 	getLights(): Light[] {
 		return this.lightService.getLights();
@@ -26,10 +28,17 @@ export class GestionComponent {
 		this.lightService.addLight();
 	}
 
+	invertLight(id: number) {
+		this.lightService.invertLight(id);
+	}
+
 	removeLight(id: number) {
 		this.lightService.removeLight(id);
 	}
 
+	invertAllLights() {
+		this.lightService.invertAllLights();
+	}
 
 
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {LightService} from '../../services/light.service';
 
 @Component({
@@ -10,6 +10,7 @@ import {LightService} from '../../services/light.service';
 	styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+
 
 	constructor(private lightService: LightService) {
 	}
