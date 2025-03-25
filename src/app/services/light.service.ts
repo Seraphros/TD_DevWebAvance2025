@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Light} from '../models/light';
+import {ApiService} from './api.service';
 
 @Injectable({
 	providedIn: 'root'
@@ -26,7 +27,7 @@ export class LightService {
 	];
 
 
-	constructor() {
+	constructor(private api: ApiService) {
 		this.refreshLights();
 	}
 
