@@ -28,12 +28,12 @@ export class GestionComponent {
 		this.lightService.addLight();
 	}
 
-	invertLight(id: number) {
-		this.lightService.invertLight(id);
+	invertLight(id: Number | undefined) {
+		if (id !== undefined) this.lightService.invertLight(id);
 	}
 
-	removeLight(id: number) {
-		this.lightService.removeLight(id);
+	removeLight(light: Light) {
+		this.lightService.removeLight(light);
 	}
 
 	invertAllLights() {

@@ -1,5 +1,5 @@
 export class Light {
-  id: number;
+  id?: Number;
   state: boolean;
   name: string;
 
